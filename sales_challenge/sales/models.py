@@ -33,3 +33,12 @@ class Merchant(BaseModel):
 
     def __str__(self):
         return '{name}'.format(name=self.name)
+
+
+class Transaction(BaseModel):
+    product = models.ForeignKey('Product', on_delete=models.CASCADE)
+    purchase_count = models.IntegerField()
+
+    def __str__(self):
+        return '#{amount} of {product}'.format(product=self.product.description, amount=self.purchase_count)
+
