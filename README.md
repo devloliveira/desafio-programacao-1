@@ -32,6 +32,11 @@ $. python manage.py createsuperuser
 $. python manage.py runserver
 ```
 
+* Executar a bateria de testes unitários
+```sh
+$. python manage.py test
+```
+
 #### O painel administrativo poderá ser acessado no seguinte link
 [Django admin](http://localhost:8000)
 
@@ -40,4 +45,5 @@ $. python manage.py runserver
 Para submeter o arquivo de vendas, é necessário acessar o painel do django admin (como superuser), clicar no modelo *Sales files* e clicar no botão Add (levando a [essa pagina](http://localhost:8000/admin/sales/salesfile/add/)). A página seguinte constitui um formulário para submissão do arquivo de vendas. Quando concluída a submissão, os modelos pertinentes serão devidamente populados.
 
 O valor de *receita total* será apresentada na change_list de Transaction ([essa página](http://localhost:8000/admin/sales/transaction/)).
+
 
