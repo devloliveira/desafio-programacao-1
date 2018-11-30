@@ -42,3 +42,7 @@ class Transaction(BaseModel):
     def __str__(self):
         return '#{amount} of {product}'.format(product=self.product.description, amount=self.purchase_count)
 
+
+class SalesFile(models.Model):
+    saved_file = models.FileField(upload_to='uploads')
+
