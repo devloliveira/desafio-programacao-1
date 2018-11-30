@@ -66,6 +66,15 @@ class TransactionModelAdmin(admin.ModelAdmin):
 
     def get_changelist(self, request):
         return TransactionChangeList
+
+
+    def changelist_view(self, *args, **kwargs):
+        context = {
+            'total': 'dummy'
+        }
+        return super().changelist_view(*args, **kwargs, extra_context=context)
+
+
 admin.site.register(Client, ReadOnlyModelAdmin)
 admin.site.register(Product, ReadOnlyModelAdmin)
 admin.site.register(Merchant, ReadOnlyModelAdmin)
