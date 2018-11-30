@@ -3,7 +3,7 @@
 
 | Lista de Dependências |
 | ------ |
-| [Django](https://www.djangoproject.com/) |
+| [Django 2.1](https://www.djangoproject.com/) |
 | [mock](https://github.com/testing-cabal/mock) |
 | [python 3.5](https://www.python.org/) |
 
