@@ -26,3 +26,10 @@ class Product(BaseModel):
             return '{description}: R${price}, {merchant}'.format(description=self.description, price=self.price, merchant=self.merchant.name)
         return '{description}: R${price} '.format(description=self.description, price=self.price)
 
+
+class Merchant(BaseModel):
+    name = models.CharField(max_length=200)
+    address = models.CharField(max_length=200)
+
+    def __str__(self):
+        return '{name}'.format(name=self.name)
