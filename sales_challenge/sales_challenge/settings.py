@@ -57,10 +57,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'sales_challenge.urls'
 
+
+CUSTOM_ADMIN_TEMPLATES = os.path.join(BASE_DIR, 'admin')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [CUSTOM_ADMIN_TEMPLATES],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,4 +126,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+MEDIA_ROOT = 'uploads'
+MEDIA_URL = '/uploads/'
 STATIC_URL = '/static/'
