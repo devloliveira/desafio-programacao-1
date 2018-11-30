@@ -7,3 +7,10 @@ class BaseModel(models.Model):
 
     class Meta:
         abstract = True
+
+
+class Client(BaseModel):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return '{name}'.format(name=self.name)
